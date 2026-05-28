@@ -25,7 +25,7 @@ This repository is organized around the practical questions a city, traffic engi
 
 ## Initial Deliverable Goals
 
-A credible summer-stage output would not be a finished design. A credible first-stage output would be a documented feasibility and screening package, including:
+A first-stage output is a documented feasibility and screening package, including:
 
 - precedent review,
 - standards and constraints matrix,
@@ -69,7 +69,7 @@ Initial references to review include:
 
 ## Working Boundary
 
-Public and academic material may be stored here. Do not store employer files, client files, internal emails, proprietary datasets, sealed engineering material, confidential cost data, signal timing sheets, nonpublic CAD drawings, or municipal documents not already intended for public release.
+Public and academic material may be stored here. Proprietary and confidential materials (e.g. – employer files, client files, internal emails, proprietary datasets, sealed engineering material, confidential cost data, signal timing sheets, nonpublic CAD drawings, or municipal documents) are not included here, as they are not intended for public release.
 
 ## License / Use
 
