@@ -1,10 +1,10 @@
 # [Research: Shade Structures at Intersections](https://robert-z-lehr.github.io/Research-Shade-Structures-at-Intersections/)
 
-- [GitHub Repo](https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections/tree/main)
-
 A public reference site and research workspace for evaluating whether shade structures at signalized intersections can be feasible, useful, safe, accessible, and governable as a municipal transportation intervention.
 
 **Status:** preliminary research and reference repository. This repository is not engineering design, construction documentation, legal advice, or a substitute for review by a licensed professional engineer, municipal traffic engineer, ADA/PROWAG reviewer, utility owner, or agency authority having jurisdiction.
+
+- Return to [GitHub Repo](https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections/tree/main):
 
 ## Core Questions
 
