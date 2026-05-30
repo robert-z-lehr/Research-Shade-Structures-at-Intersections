@@ -19,6 +19,10 @@
             background-color: #1f2937;
             color: white;
             padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
 
         header h1 {
@@ -34,13 +38,28 @@
         nav {
             background-color: #374151;
             padding: 1rem;
+            position: sticky;
+            top: 145px;
+            z-index: 999;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         nav a {
             color: white;
-            margin-right: 1rem;
+            margin-right: 1.25rem;
             text-decoration: none;
             font-weight: bold;
+            transition: opacity 0.2s ease;
+        }
+        
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         main {
@@ -51,6 +70,7 @@
         }
 
         section {
+            scroll-margin-top: 220px;
             margin-bottom: 3rem;
         }
 
