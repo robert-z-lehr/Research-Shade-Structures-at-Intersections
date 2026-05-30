@@ -18,7 +18,7 @@
         header {
             background-color: #1f2937;
             color: white;
-            padding: 2rem;
+            padding: 1.5rem 2rem 1rem 2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -37,13 +37,18 @@
 
         nav {
             background-color: #374151;
-            padding: 1rem;
+            padding: 0.85rem 2rem;
+            margin-top: 1rem;
+        
             position: sticky;
-            top: 145px;
-            z-index: 999;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            top: 0;
+        
+            z-index: 1001;
+        
             overflow-x: auto;
             white-space: nowrap;
+        
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
         nav a {
@@ -58,19 +63,28 @@
             opacity: 0.7;
         }
 
+        nav a:active {
+            opacity: 0.5;
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
         main {
             max-width: 1100px;
-            margin: auto;
+            margin: 2rem auto;
             padding: 2rem;
             background-color: white;
+        
+            border-radius: 10px;
+        
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.08);
         }
 
         section {
-            scroll-margin-top: 220px;
+            scroll-margin-top: 120px;
             margin-bottom: 3rem;
         }
 
@@ -124,6 +138,8 @@
 </header>
 
 <nav>
+    <a href="https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections" target="_blank">
+    GitHub Repo</a>
     <a href="#problem">Problem</a>
     <a href="#why-shade">Why Shade?</a>
     <a href="#constraints">Key Constraints</a>
