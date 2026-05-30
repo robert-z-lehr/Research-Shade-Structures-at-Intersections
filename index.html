@@ -12,7 +12,7 @@
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,125 +29,180 @@
         TOP BAR
         ========================================
         */
-
+        
         .topbar {
-            position: sticky;
+        
+            position: fixed;
+        
             top: 0;
-
+            left: 0;
+        
+            width: 100%;
+        
             z-index: 1000;
-
+        
+            background-color: #1f2937;
+        
             box-shadow:
                 0 2px 10px rgba(0,0,0,0.25);
         }
-
+        
         /*
         ========================================
         HEADER
         ========================================
         */
-
+        
         header {
-            background-color: #1f2937;
+        
             color: white;
-
+        
             padding:
                 1.5rem
                 2rem
                 1rem
                 2rem;
         }
-
+        
         header h1 {
             margin: 0;
             font-size: 2.2rem;
         }
-
+        
         header p {
+        
             max-width: 950px;
+        
             margin-top: 1rem;
             margin-bottom: 0;
         }
-
+        
         /*
         ========================================
         NAVIGATION
         ========================================
         */
-
+        
         nav {
+        
             background-color: #374151;
-
+        
             padding:
                 0.9rem
                 2rem;
-
+        
             overflow-x: auto;
+        
             white-space: nowrap;
         }
-
+        
         nav a {
+        
             color: white;
-
+        
             margin-right: 1.3rem;
-
+        
             text-decoration: none;
-
+        
             font-weight: bold;
-
+        
             transition:
                 opacity 0.2s ease;
         }
-
+        
         nav a:hover {
             opacity: 0.7;
         }
-
+        
         nav a:active {
             opacity: 0.5;
         }
-
+        
         /*
         ========================================
         MAIN CONTENT
         ========================================
         */
-
+        
         main {
+        
             max-width: 1100px;
-
+        
             margin:
-                2rem auto;
-
+                240px auto 2rem auto;
+        
             padding:
                 2rem;
-
+        
             background-color: white;
-
+        
             border-radius: 10px;
-
+        
             box-shadow:
                 0 2px 8px rgba(0,0,0,0.08);
         }
-
+        
         /*
         ========================================
         SECTIONS
         ========================================
         */
-
+        
         section {
-            scroll-margin-top: 180px;
-            margin-bottom: 3rem;
-        }
-
-        h2 {
+        
+            scroll-margin-top: 260px;
+        
+            margin-bottom: 2rem;
+        
             border-bottom:
-                2px solid #ddd;
-
+                1px solid #ddd;
+        
             padding-bottom:
-                0.5rem;
+                1rem;
+        }
+        
+        /*
+        ========================================
+        SECTION TOGGLES
+        ========================================
+        */
+        
+        .section-toggle {
+        
+            cursor: pointer;
+        
+            user-select: none;
+        
+            display: flex;
+        
+            align-items: center;
+        
+            gap: 0.5rem;
         }
 
+        .section-toggle:hover {
+
+            opacity: 0.75;
+        }
+        
+        .arrow {
+        
+            font-size: 0.9rem;
+        
+            transition:
+                transform 0.2s ease;
+        }
+        
+        .arrow.collapsed {
+        
+            transform:
+                rotate(-90deg);
+        }
+        
+        .section-content.hidden {
+        
+            display: none;
+        }
         /*
         ========================================
         TABLES
@@ -211,7 +266,7 @@
     </style>
 
 </head>
-
+    
 <body>
 
     <!-- ===================================== -->
@@ -236,9 +291,8 @@
 
         <nav>
 
-            <a href="https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections"
-               target="_blank">
-                GitHub Repo
+            <a href="#github-repo">
+                Go to GitHub Repo
             </a>
 
             <a href="#problem">Problem</a>
@@ -270,35 +324,81 @@
     <main>
 
         <!-- ================================= -->
+        <!-- GO TO GITHUB REPO -->
+        <!-- ================================= -->
+        
+        <section id="github-repo">
+        
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Go to GitHub Repo
+        
+            </h2>
+        
+            <div class="section-content">
+        
+                <p>
+        
+                    Repository URL:
+        
+                </p>
+        
+                <p>
+        
+                    <a href="https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections"
+                       target="_blank">
+        
+                       https://github.com/robert-z-lehr/Research-Shade-Structures-at-Intersections
+        
+                    </a>
+        
+                </p>
+        
+            </div>
+        
+        </section>
+        
+        <!-- ================================= -->
         <!-- PROBLEM -->
         <!-- ================================= -->
-
         <section id="problem">
+        
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Problem
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <h2>Problem</h2>
+                <p>
+                    Many urban intersections expose pedestrians to prolonged solar
+                    radiation while waiting to cross streets or access transit systems.
+                    In high-temperature environments, especially in automobile-oriented
+                    urban corridors, pedestrian thermal exposure may influence:
+                </p>
+    
+                <ul>
+                    <li>pedestrian comfort,</li>
+                    <li>walking behavior,</li>
+                    <li>transit accessibility,</li>
+                    <li>heat exposure risk,</li>
+                    <li>and public-space usability.</li>
+                </ul>
+    
+                <p>
+                    This repository investigates whether shade structures integrated
+                    near signalized intersections may represent a viable
+                    transportation-adjacent intervention under specific geometric,
+                    operational, structural, governance, and accessibility constraints.
+                </p>
 
-            <p>
-                Many urban intersections expose pedestrians to prolonged solar
-                radiation while waiting to cross streets or access transit systems.
-                In high-temperature environments, especially in automobile-oriented
-                urban corridors, pedestrian thermal exposure may influence:
-            </p>
-
-            <ul>
-                <li>pedestrian comfort,</li>
-                <li>walking behavior,</li>
-                <li>transit accessibility,</li>
-                <li>heat exposure risk,</li>
-                <li>and public-space usability.</li>
-            </ul>
-
-            <p>
-                This repository investigates whether shade structures integrated
-                near signalized intersections may represent a viable
-                transportation-adjacent intervention under specific geometric,
-                operational, structural, governance, and accessibility constraints.
-            </p>
-
+            </div>
+                
         </section>
 
         <!-- ================================= -->
@@ -307,34 +407,44 @@
 
         <section id="why-shade">
 
-            <h2>Why Shade?</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Why Shade?
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <p>
-                Existing urban heat mitigation strategies often emphasize:
-            </p>
-
-            <ul>
-                <li>urban forestry,</li>
-                <li>cool pavements,</li>
-                <li>building retrofits,</li>
-                <li>and transit shelter improvements.</li>
-            </ul>
-
-            <p>
-                However, many signalized pedestrian crossings remain exposed
-                despite functioning as repeated waiting zones within
-                transportation systems.
-            </p>
-
-            <div class="note">
-
-                This repository does not assume that shade structures are
-                appropriate or feasible at all intersections.
-
-                The research objective is to develop a structured evaluation
-                framework for determining where such concepts may or may not
-                be viable.
-
+                <p>
+                    Existing urban heat mitigation strategies often emphasize:
+                </p>
+    
+                <ul>
+                    <li>urban forestry,</li>
+                    <li>cool pavements,</li>
+                    <li>building retrofits,</li>
+                    <li>and transit shelter improvements.</li>
+                </ul>
+    
+                <p>
+                    However, many signalized pedestrian crossings remain exposed
+                    despite functioning as repeated waiting zones within
+                    transportation systems.
+                </p>
+    
+                <div class="note">
+    
+                    This repository does not assume that shade structures are
+                    appropriate or feasible at all intersections.
+    
+                    The research objective is to develop a structured evaluation
+                    framework for determining where such concepts may or may not
+                    be viable.
+    
+                </div>
+                
             </div>
 
         </section>
@@ -345,104 +455,134 @@
 
         <section id="constraints">
 
-            <h2>Key Constraints</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Constraints
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <table>
+                <table>
+    
+                    <tr>
+                        <th>Category</th>
+                        <th>Example Question</th>
+                        <th>Governing Source</th>
+                        <th>Risk Level</th>
+                        <th>Unknowns</th>
+                    </tr>
+    
+                    <tr>
+                        <td>ADA / PROWAG</td>
+                        <td>Does the structure reduce sidewalk clear width?</td>
+                        <td>PROWAG</td>
+                        <td>High</td>
+                        <td>Geometry</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Signal Visibility</td>
+                        <td>Could the structure obstruct signal heads?</td>
+                        <td>MUTCD</td>
+                        <td>High</td>
+                        <td>Pole orientation</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Wind Loading</td>
+                        <td>Does the canopy increase pole moments?</td>
+                        <td>ASCE 7</td>
+                        <td>High</td>
+                        <td>Material selection</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Utilities</td>
+                        <td>Are communication or power lines attached?</td>
+                        <td>Utility Standards</td>
+                        <td>Medium</td>
+                        <td>Ownership</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Maintenance Access</td>
+                        <td>Can crews safely access infrastructure?</td>
+                        <td>Municipal Operations</td>
+                        <td>Medium</td>
+                        <td>Access envelope</td>
+                    </tr>
+    
+                </table>
 
-                <tr>
-                    <th>Category</th>
-                    <th>Example Question</th>
-                    <th>Governing Source</th>
-                    <th>Risk Level</th>
-                    <th>Unknowns</th>
-                </tr>
-
-                <tr>
-                    <td>ADA / PROWAG</td>
-                    <td>Does the structure reduce sidewalk clear width?</td>
-                    <td>PROWAG</td>
-                    <td>High</td>
-                    <td>Geometry</td>
-                </tr>
-
-                <tr>
-                    <td>Signal Visibility</td>
-                    <td>Could the structure obstruct signal heads?</td>
-                    <td>MUTCD</td>
-                    <td>High</td>
-                    <td>Pole orientation</td>
-                </tr>
-
-                <tr>
-                    <td>Wind Loading</td>
-                    <td>Does the canopy increase pole moments?</td>
-                    <td>ASCE 7</td>
-                    <td>High</td>
-                    <td>Material selection</td>
-                </tr>
-
-                <tr>
-                    <td>Utilities</td>
-                    <td>Are communication or power lines attached?</td>
-                    <td>Utility Standards</td>
-                    <td>Medium</td>
-                    <td>Ownership</td>
-                </tr>
-
-                <tr>
-                    <td>Maintenance Access</td>
-                    <td>Can crews safely access infrastructure?</td>
-                    <td>Municipal Operations</td>
-                    <td>Medium</td>
-                    <td>Access envelope</td>
-                </tr>
-
-            </table>
-
+            </div>
+                
         </section>
 
         <!-- ================================= -->
-        <!-- STANDARDS -->
+        <!-- STANDARDS & GUIDANCE-->
         <!-- ================================= -->
 
         <section id="standards">
 
-            <h2>Standards and Guidance</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Standards & Guidance
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <ul>
-                <li>FHWA MUTCD</li>
-                <li>U.S. Access Board PROWAG</li>
-                <li>ASCE 7</li>
-                <li>AASHTO guidance</li>
-                <li>NACTO Urban Street Design Guide</li>
-                <li>Municipal transportation criteria manuals</li>
-                <li>Signal infrastructure specifications</li>
-            </ul>
+                    <ul>
+                        <li>FHWA MUTCD</li>
+                        <li>U.S. Access Board PROWAG</li>
+                        <li>ASCE 7</li>
+                        <li>AASHTO guidance</li>
+                        <li>NACTO Urban Street Design Guide</li>
+                        <li>Municipal transportation criteria manuals</li>
+                        <li>Signal infrastructure specifications</li>
+                    </ul>
 
+                </div>
+                
         </section>
-
+    
         <!-- ================================= -->
         <!-- PRECEDENTS -->
         <!-- ================================= -->
-
+    
         <section id="precedents">
+    
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Precedents
+        
+            </h2>
+        
+            <div class="section-content hidden">
+    
+                <p>
+                    The precedent review includes not only shade systems,
+                    but broader transportation-adjacent pedestrian comfort
+                    infrastructure:
+                </p>
+    
+                <ul>
+                    <li>bus stop shade systems,</li>
+                    <li>temporary cooling infrastructure,</li>
+                    <li>cantilevered streetscape structures,</li>
+                    <li>signal-mounted infrastructure,</li>
+                    <li>pedestrian comfort installations,</li>
+                    <li>and climate adaptation pilots.</li>
+                </ul>
 
-            <h2>Precedents</h2>
-
-            <p>
-                The precedent review includes not only shade systems,
-                but broader transportation-adjacent pedestrian comfort
-                infrastructure:
-            </p>
-
-            <ul>
-                <li>bus stop shade systems,</li>
-                <li>temporary cooling infrastructure,</li>
-                <li>cantilevered streetscape structures,</li>
-                <li>signal-mounted infrastructure,</li>
-                <li>pedestrian comfort installations,</li>
-                <li>and climate adaptation pilots.</li>
-            </ul>
+            </div>
 
         </section>
 
@@ -452,75 +592,106 @@
 
         <section id="research">
 
-            <h2>Research Questions</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Research Questions
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <ul>
-                <li>Under what conditions could intersection shade systems be viable?</li>
-                <li>What geometric and operational constraints dominate feasibility?</li>
-                <li>How might thermal exposure metrics change under shaded conditions?</li>
-                <li>What governance and maintenance structures would be required?</li>
-                <li>How should candidate intersections be prioritized?</li>
-            </ul>
+                <ul>
+                    <li>Under what conditions could intersection shade systems be viable?</li>
+                    <li>What geometric and operational constraints dominate feasibility?</li>
+                    <li>How might thermal exposure metrics change under shaded conditions?</li>
+                    <li>What governance and maintenance structures would be required?</li>
+                    <li>How should candidate intersections be prioritized?</li>
+                    <li>What is the economic viability of implementing shade on the LCA of pavement and concrete?</li>
+                </ul>
+
+            </div>
 
         </section>
 
         <!-- ================================= -->
-        <!-- GIS -->
+        <!-- GIS + Data Framework -->
         <!-- ================================= -->
 
         <section id="gis">
 
-            <h2>GIS + Data Framework</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                GIS + Data Framework
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <p>
-                Potential screening layers include:
-            </p>
+                <p>
+                    Potential screening layers include:
+                </p>
+    
+                <ul>
+                    <li>pedestrian counts,</li>
+                    <li>transit stops,</li>
+                    <li>tree canopy coverage,</li>
+                    <li>surface temperature data,</li>
+                    <li>thermal hotspot mapping,</li>
+                    <li>sidewalk widths,</li>
+                    <li>crash history,</li>
+                    <li>socioeconomic vulnerability,</li>
+                    <li>intersection delay,</li>
+                    <li>and solar exposure.</li>
+                </ul>
 
-            <ul>
-                <li>pedestrian counts,</li>
-                <li>transit stops,</li>
-                <li>tree canopy coverage,</li>
-                <li>surface temperature data,</li>
-                <li>thermal hotspot mapping,</li>
-                <li>sidewalk widths,</li>
-                <li>crash history,</li>
-                <li>socioeconomic vulnerability,</li>
-                <li>intersection delay,</li>
-                <li>and solar exposure.</li>
-            </ul>
+            </div>
 
         </section>
 
         <!-- ================================= -->
-        <!-- PILOT -->
+        <!-- PILOT FRAMEWORK-->
         <!-- ================================= -->
 
         <section id="pilot">
 
-            <h2>Pilot Framework</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                Pilot Framework
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <p>
-                Preliminary screening suggests that any future pilot framework
-                would require:
-            </p>
-
-            <ul>
-                <li>multi-agency review,</li>
-                <li>site-specific engineering analysis,</li>
-                <li>wind loading evaluation,</li>
-                <li>maintenance coordination,</li>
-                <li>accessibility review,</li>
-                <li>and operational safety validation.</li>
-            </ul>
-
-            <div class="note">
-
-                This repository does not claim that candidate concepts are:
-                approved,
-                deployable,
-                structurally validated,
-                or operationally feasible without additional engineering review
-                and agency evaluation.
+                <p>
+                    Preliminary screening suggests that any future pilot framework
+                    would require:
+                </p>
+    
+                <ul>
+                    <li>multi-agency review,</li>
+                    <li>site-specific engineering analysis,</li>
+                    <li>wind loading evaluation,</li>
+                    <li>maintenance coordination,</li>
+                    <li>accessibility review,</li>
+                    <li>and operational safety validation.</li>
+                </ul>
+    
+                <div class="note">
+    
+                    This repository does not claim that candidate concepts are:
+                    approved,
+                    deployable,
+                    structurally validated,
+                    or operationally feasible without additional engineering review
+                    and agency evaluation.
+    
+                </div>
 
             </div>
 
@@ -532,16 +703,26 @@
 
         <section id="references">
 
-            <h2>References</h2>
+            <h2 class="section-toggle">
+        
+                <span class="arrow">▼</span>
+        
+                References
+        
+            </h2>
+        
+            <div class="section-content hidden">
 
-            <ul>
-                <li>FHWA Manual on Uniform Traffic Control Devices (MUTCD)</li>
-                <li>U.S. Access Board PROWAG</li>
-                <li>ASCE 7</li>
-                <li>AASHTO publications</li>
-                <li>NACTO Urban Street Design Guide</li>
-                <li>Municipal transportation criteria manuals</li>
-            </ul>
+                <ul>
+                    <li>FHWA Manual on Uniform Traffic Control Devices (MUTCD)</li>
+                    <li>U.S. Access Board PROWAG</li>
+                    <li>ASCE 7</li>
+                    <li>AASHTO publications</li>
+                    <li>NACTO Urban Street Design Guide</li>
+                    <li>Municipal transportation criteria manuals</li>
+                </ul>
+
+            </div>
 
         </section>
 
@@ -556,6 +737,27 @@
         Research repository maintained by Robert Lehr.
 
     </footer>
+
+    <script>
+    
+        document.querySelectorAll(".section-toggle").forEach(toggle => {
+        
+            toggle.addEventListener("click", () => {
+        
+                const content =
+                    toggle.parentElement.querySelector(".section-content");
+        
+                const arrow =
+                    toggle.querySelector(".arrow");
+        
+                content.classList.toggle("hidden");
+        
+                arrow.classList.toggle("collapsed");
+            });
+        
+        });
+    
+    </script>
 
 </body>
 
