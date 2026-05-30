@@ -4,23 +4,332 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shade Structures at Intersections</title>
+
     <style>
-        body { font-family: Arial, sans-serif; margin: 2em; }
-        h1, h2 { color: #2c3e50; }
-        ul { line-height: 1.6; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #222;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            padding: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            max-width: 900px;
+            margin-top: 1rem;
+        }
+
+        nav {
+            background-color: #374151;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+            background-color: white;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .note {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
-<body>
-    <h1>Research: Shade Structures at Intersections</h1>
-    <p>Welcome to the reference site exploring the feasibility of shade structures at traffic signal intersections.</p>
 
-    <h2>Sections</h2>
+<body>
+
+<header>
+    <h1>Research: Shade Structures at Intersections</h1>
+
+    <p>
+        A research and reference framework investigating the feasibility,
+        constraints, and potential utility of shade structures integrated
+        within transportation and pedestrian infrastructure environments.
+    </p>
+</header>
+
+<nav>
+    <a href="#problem">Problem</a>
+    <a href="#why-shade">Why Shade?</a>
+    <a href="#constraints">Key Constraints</a>
+    <a href="#standards">Standards</a>
+    <a href="#precedents">Precedents</a>
+    <a href="#research">Research Questions</a>
+    <a href="#gis">GIS + Data</a>
+    <a href="#pilot">Pilot Framework</a>
+    <a href="#references">References</a>
+</nav>
+
+<main>
+
+<section id="problem">
+    <h2>Problem</h2>
+
+    <p>
+        Many urban intersections expose pedestrians to prolonged solar radiation
+        while waiting to cross streets or access transit systems.
+        In high-temperature environments, especially in automobile-oriented
+        urban corridors, pedestrian thermal exposure may influence:
+    </p>
+
     <ul>
-        <li><a href="docs/assessment-framework.md">Assessment Framework</a></li>
-        <li><a href="docs/reference-sources.md">Reference Sources</a></li>
-        <!-- Add more sections as your content expands -->
+        <li>pedestrian comfort,</li>
+        <li>walking behavior,</li>
+        <li>transit accessibility,</li>
+        <li>heat exposure risk,</li>
+        <li>and public-space usability.</li>
     </ul>
 
-    <p>This site is a structured research repository. For full context, refer to the GitHub repository README.</p>
+    <p>
+        This repository investigates whether shade structures integrated near
+        signalized intersections may represent a viable transportation-adjacent
+        intervention under specific geometric, operational, structural,
+        governance, and accessibility constraints.
+    </p>
+</section>
+
+<section id="why-shade">
+    <h2>Why Shade?</h2>
+
+    <p>
+        Existing urban heat mitigation strategies often emphasize:
+    </p>
+
+    <ul>
+        <li>urban forestry,</li>
+        <li>cool pavements,</li>
+        <li>building retrofits,</li>
+        <li>and transit shelter improvements.</li>
+    </ul>
+
+    <p>
+        However, many signalized pedestrian crossings remain exposed despite
+        functioning as repeated waiting zones within transportation systems.
+    </p>
+
+    <div class="note">
+        This repository does not assume that shade structures are appropriate
+        or feasible at all intersections. The research objective is to develop
+        a structured evaluation framework for determining where such concepts
+        may or may not be viable.
+    </div>
+</section>
+
+<section id="constraints">
+    <h2>Key Constraints</h2>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Example Question</th>
+            <th>Governing Source</th>
+            <th>Risk Level</th>
+            <th>Unknowns</th>
+        </tr>
+
+        <tr>
+            <td>ADA / PROWAG</td>
+            <td>Does the structure reduce sidewalk clear width?</td>
+            <td>PROWAG</td>
+            <td>High</td>
+            <td>Geometry</td>
+        </tr>
+
+        <tr>
+            <td>Signal Visibility</td>
+            <td>Could the structure obstruct signal heads?</td>
+            <td>MUTCD</td>
+            <td>High</td>
+            <td>Pole orientation</td>
+        </tr>
+
+        <tr>
+            <td>Wind Loading</td>
+            <td>Does the canopy increase pole moments?</td>
+            <td>ASCE 7</td>
+            <td>High</td>
+            <td>Material selection</td>
+        </tr>
+
+        <tr>
+            <td>Utilities</td>
+            <td>Are communication or power lines attached?</td>
+            <td>Utility Standards</td>
+            <td>Medium</td>
+            <td>Ownership</td>
+        </tr>
+
+        <tr>
+            <td>Maintenance Access</td>
+            <td>Can crews safely access infrastructure?</td>
+            <td>Municipal Operations</td>
+            <td>Medium</td>
+            <td>Access envelope</td>
+        </tr>
+    </table>
+</section>
+
+<section id="standards">
+    <h2>Standards and Guidance</h2>
+
+    <ul>
+        <li>FHWA MUTCD</li>
+        <li>U.S. Access Board PROWAG</li>
+        <li>ASCE 7</li>
+        <li>AASHTO guidance</li>
+        <li>NACTO Urban Street Design Guide</li>
+        <li>Municipal transportation criteria manuals</li>
+        <li>Signal infrastructure specifications</li>
+    </ul>
+</section>
+
+<section id="precedents">
+    <h2>Precedents</h2>
+
+    <p>
+        The precedent review includes not only shade systems,
+        but broader transportation-adjacent pedestrian comfort infrastructure:
+    </p>
+
+    <ul>
+        <li>bus stop shade systems,</li>
+        <li>temporary cooling infrastructure,</li>
+        <li>cantilevered streetscape structures,</li>
+        <li>signal-mounted infrastructure,</li>
+        <li>pedestrian comfort installations,</li>
+        <li>and climate adaptation pilots.</li>
+    </ul>
+</section>
+
+<section id="research">
+    <h2>Research Questions</h2>
+
+    <ul>
+        <li>Under what conditions could intersection shade systems be viable?</li>
+        <li>What geometric and operational constraints dominate feasibility?</li>
+        <li>How might thermal exposure metrics change under shaded conditions?</li>
+        <li>What governance and maintenance structures would be required?</li>
+        <li>How should candidate intersections be prioritized?</li>
+    </ul>
+</section>
+
+<section id="gis">
+    <h2>GIS + Data Framework</h2>
+
+    <p>
+        Potential screening layers include:
+    </p>
+
+    <ul>
+        <li>pedestrian counts,</li>
+        <li>transit stops,</li>
+        <li>tree canopy coverage,</li>
+        <li>surface temperature data,</li>
+        <li>thermal hotspot mapping,</li>
+        <li>sidewalk widths,</li>
+        <li>crash history,</li>
+        <li>socioeconomic vulnerability,</li>
+        <li>intersection delay,</li>
+        <li>and solar exposure.</li>
+    </ul>
+</section>
+
+<section id="pilot">
+    <h2>Pilot Framework</h2>
+
+    <p>
+        Preliminary screening suggests that any future pilot framework would require:
+    </p>
+
+    <ul>
+        <li>multi-agency review,</li>
+        <li>site-specific engineering analysis,</li>
+        <li>wind loading evaluation,</li>
+        <li>maintenance coordination,</li>
+        <li>accessibility review,</li>
+        <li>and operational safety validation.</li>
+    </ul>
+
+    <div class="note">
+        This repository does not claim that candidate concepts are approved,
+        deployable, structurally validated, or operationally feasible without
+        additional engineering review and agency evaluation.
+    </div>
+</section>
+
+<section id="references">
+    <h2>References</h2>
+
+    <ul>
+        <li>FHWA Manual on Uniform Traffic Control Devices (MUTCD)</li>
+        <li>U.S. Access Board PROWAG</li>
+        <li>ASCE 7</li>
+        <li>AASHTO publications</li>
+        <li>NACTO Urban Street Design Guide</li>
+        <li>Municipal transportation criteria manuals</li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    Research repository maintained by Robert Lehr.
+</footer>
+
 </body>
 </html>
