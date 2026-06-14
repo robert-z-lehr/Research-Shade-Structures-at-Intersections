@@ -227,6 +227,7 @@
         td {
             padding: 0.75rem;
             text-align: left;
+            vertical-align: top;
         }
 
         /*
@@ -306,6 +307,8 @@
             <a href="#precedents">Precedents</a>
 
             <a href="#research">Research Questions</a>
+
+            <a href="#research-proposal">Research Proposal</a>
 
             <a href="#gis">GIS + Data</a>
 
@@ -608,8 +611,133 @@
                     <li>How might thermal exposure metrics change under shaded conditions?</li>
                     <li>What governance and maintenance structures would be required?</li>
                     <li>How should candidate intersections be prioritized?</li>
-                    <li>What is the economic viability of implementing shade on the LCA of pavement and concrete?</li>
+                    <li>What is the economic viability of implementing shade when pavement, concrete, and related lifecycle costs are considered?</li>
                 </ul>
+
+            </div>
+
+        </section>
+
+        <!-- ================================= -->
+        <!-- RESEARCH PROPOSAL -->
+        <!-- ================================= -->
+
+        <section id="research-proposal">
+
+            <h2 class="section-toggle">
+
+                <span class="arrow">▼</span>
+
+                Research Proposal
+
+            </h2>
+
+            <div class="section-content hidden">
+
+                <h3>Working Title</h3>
+
+                <p>
+                    Decision Analytics for Pedestrian Heat-Mitigation Infrastructure at Urban Intersections.
+                </p>
+
+                <h3>Current Research Objective</h3>
+
+                <p>
+                    This research is evolving from a single-intervention feasibility study of stoplight-mounted
+                    shade structures into a broader decision-support framework for comparing pedestrian
+                    heat-mitigation interventions at urban intersections. The proposed framework evaluates
+                    SMS against other interventions such as trees, bus shelters, stand-alone shade, cool pavement,
+                    reflective surfaces, sidewalk sheds, and hybrid approaches.
+                </p>
+
+                <h3>Core Gap</h3>
+
+                <p>
+                    Existing heat-mitigation interventions are often evaluated in disciplinary silos. Thermal studies
+                    may emphasize air temperature, surface temperature, mean radiant temperature, UTCI, PET, or WBGT.
+                    Transportation studies may emphasize safety, delay, crossing behavior, and accessibility. Asset-management
+                    studies may emphasize lifecycle cost, pavement degradation, or maintenance. Municipal pilots may emphasize
+                    implementation feasibility, aesthetics, or political acceptance. The central gap is that these dimensions
+                    are rarely integrated into one reproducible decision-analytic method.
+                </p>
+
+                <h3>Primary Contribution</h3>
+
+                <p>
+                    The proposed contribution is a modular decision-support methodology that helps cities compare feasible
+                    pedestrian heat-mitigation alternatives under real-world constraints.
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Module</th>
+                        <th>Purpose</th>
+                        <th>Candidate Tools</th>
+                    </tr>
+                    <tr>
+                        <td>Intervention taxonomy</td>
+                        <td>Classify shade, albedo, vegetation, shelter, and hybrid strategies.</td>
+                        <td>Zotero, Excel, Airtable</td>
+                    </tr>
+                    <tr>
+                        <td>Feasibility filter</td>
+                        <td>Screen alternatives for ADA/PROWAG, MUTCD, wind loading, right-of-way, utility, and maintenance conflicts.</td>
+                        <td>Excel, ArcGIS, CAD, structural screening tools</td>
+                    </tr>
+                    <tr>
+                        <td>GIS screening</td>
+                        <td>Prioritize candidate intersections using heat exposure, pedestrian demand, transit access, shade deficit, crash history, and vulnerability.</td>
+                        <td>ArcGIS Pro, QGIS, ArcGIS Online</td>
+                    </tr>
+                    <tr>
+                        <td>Thermal-performance assessment</td>
+                        <td>Compare intervention effects using pedestrian-relevant thermal metrics.</td>
+                        <td>Python, ENVI-met, Ladybug Tools, field sensors</td>
+                    </tr>
+                    <tr>
+                        <td>LCCA</td>
+                        <td>Compare capital cost, O&amp;M, replacement, end-of-life, and asset-preservation implications.</td>
+                        <td>Python, Excel, R, Monte Carlo analysis</td>
+                    </tr>
+                    <tr>
+                        <td>MCDA</td>
+                        <td>Rank feasible alternatives across thermal, economic, regulatory, equity, maintenance, safety, and public-acceptance criteria.</td>
+                        <td>Python, R, Excel, Power BI</td>
+                    </tr>
+                    <tr>
+                        <td>Validation</td>
+                        <td>Compare model outputs with field measurements, expert judgment, precedent cases, and stakeholder review.</td>
+                        <td>Python, Power BI, Tableau, interview coding tools</td>
+                    </tr>
+                </table>
+
+                <h3>Case-Matrix Plan</h3>
+
+                <p>
+                    A baseline 30-case matrix will be used to identify where prior intervention decisions appear incomplete.
+                    Each case will be coded for whether it considered thermal metrics, lifecycle cost, maintenance, equity,
+                    public acceptance, regulatory constraints, uncertainty, and alternatives comparison. A smaller subset of
+                    approximately 8 to 10 cases can then be selected for deeper analysis and back-testing.
+                </p>
+
+                <h3>Role of SMS</h3>
+
+                <p>
+                    SMS is treated as one candidate intervention within the decision framework, not as a predetermined solution.
+                    This keeps the research useful even if SMS is found infeasible at some or many sites. The broader PhD contribution
+                    is the decision method, while SMS functions as a motivating case and potential intervention class.
+                </p>
+
+                <div class="note">
+                    This section is a working research proposal. It is not a claim that SMS is approved, structurally validated,
+                    legally compliant, cost-effective, or universally suitable. Those are precisely the types of questions the
+                    proposed framework is intended to evaluate.
+                </div>
+
+                <p>
+                    Supporting documents: <a href="docs/research-proposal.md" target="_blank">research proposal</a>
+                    and <a href="docs/30-case-matrix.md" target="_blank">baseline 30-case matrix</a>.
+                </p>
 
             </div>
 
@@ -720,6 +848,8 @@
                     <li>AASHTO publications</li>
                     <li>NACTO Urban Street Design Guide</li>
                     <li>Municipal transportation criteria manuals</li>
+                    <li>FHWA and NHTSA pedestrian safety datasets and reports</li>
+                    <li>Urban heat, thermal comfort, cool pavement, shade, LCCA, MCDA, and public-acceptance literature</li>
                 </ul>
 
             </div>
