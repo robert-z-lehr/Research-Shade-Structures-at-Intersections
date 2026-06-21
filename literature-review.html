@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literature Review | Shade Structures at Intersections</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; background: #f7f7f7; color: #222; }
+    header { background: #1f2937; color: white; padding: 1.5rem 2rem; }
+    header h1 { margin: 0; }
+    nav { background: #374151; padding: 0.9rem 2rem; }
+    nav a { color: white; margin-right: 0.75rem; padding: 0.35rem 0.65rem; border-radius: 999px; text-decoration: none; font-weight: bold; }
+    main { max-width: 1150px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    section { scroll-margin-top: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 1.25rem; margin-bottom: 1.75rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 0.75rem; vertical-align: top; text-align: left; }
+    th { background: #f3f4f6; }
+    .note { background: #f3f4f6; border-left: 4px solid #6b7280; padding: 1rem; margin: 1rem 0; }
+    .back { display: inline-block; margin-top: 0.5rem; background: #e5e7eb; color: #111827; padding: 0.45rem 0.75rem; border-radius: 999px; text-decoration: none; font-weight: bold; }
+    code { background: #f3f4f6; padding: 0.1rem 0.25rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Literature Review</h1>
+    <p>Working evidence base for pedestrian heat mitigation, stoplight-mounted shade structures, and decision analytics at urban intersections.</p>
+    <a class="back" href="index.html#references">Back to home page</a>
+  </header>
+  <nav>
+    <a href="#method">Method</a>
+    <a href="#daily-system">Daily System</a>
+    <a href="#coding-template">Coding Template</a>
+    <a href="#mutcd">MUTCD</a>
+    <a href="#prowag">PROWAG</a>
+    <a href="#asce7">ASCE 7</a>
+    <a href="#nacto">NACTO</a>
+    <a href="#thermal-comfort">Thermal Comfort</a>
+    <a href="#mcda-lcca">MCDA + LCCA</a>
+  </nav>
+  <main>
+    <section id="method">
+      <h2>Systematic Literature Review Method</h2>
+      <p>This review should treat each source as evidence to be coded, not merely as a citation to be collected. The goal is to determine what the source can defensibly support, what it cannot support, and how it informs a municipal decision framework for pedestrian heat-mitigation infrastructure.</p>
+      <ol>
+        <li><strong>Log the source.</strong> Record citation, URL or DOI, document type, publication year, jurisdiction, publisher, and access date.</li>
+        <li><strong>Classify the source.</strong> Code it as standard, law/guidance, peer-reviewed article, government report, case study, dataset, technical manual, design guide, public-facing article, or internal note.</li>
+        <li><strong>Extract the research object.</strong> Identify the intervention, population, site type, climate context, time scale, and decision context.</li>
+        <li><strong>Extract methods and metrics.</strong> Record whether the source uses field measurement, modeling, survey, GIS, LCCA, MCDA, laboratory testing, policy analysis, design precedent review, or expert judgment.</li>
+        <li><strong>Separate findings from claims.</strong> Distinguish measured results from author interpretation, design intent, advocacy language, or untested assumptions.</li>
+        <li><strong>Code relevance to SMS.</strong> Mark whether the source informs thermal performance, signal/pole constraints, ADA/PROWAG, wind/structural feasibility, lifecycle cost, public acceptance, equity, pedestrian behavior, or implementation governance.</li>
+        <li><strong>Identify limitations.</strong> Note sample size, climate specificity, lack of pedestrian metrics, lack of before/after data, lack of uncertainty analysis, or missing cost/O&amp;M evidence.</li>
+        <li><strong>Write the synthesis note.</strong> Produce a 150-300 word paragraph answering: What does this source add to the decision framework, and what evidence gap remains?</li>
+        <li><strong>Update the decision matrix.</strong> Add one row to the source matrix and one row to the intervention/criterion matrix if the source changes feasibility, scoring, or uncertainty assumptions.</li>
+      </ol>
+    </section>
+
+    <section id="daily-system">
+      <h2>Self-Imposed Research Operating System</h2>
+      <div class="note">Minimum standard: one concrete repository task per day. A task is complete only when it leaves a visible artifact: a note, coded source row, issue, commit, table, figure, diagram, or revised section.</div>
+      <table>
+        <tr><th>Cadence</th><th>Action</th><th>Definition of Done</th></tr>
+        <tr><td>Daily</td><td>Process at least one source, improve one section, create one issue, or close one small task.</td><td>A commit, issue comment, source row, or literature-review section exists in the repo.</td></tr>
+        <tr><td>Monday</td><td>Select the week’s target question.</td><td>One question is written as a GitHub issue.</td></tr>
+        <tr><td>Tuesday-Saturday</td><td>Run source extraction and synthesis.</td><td>At least five sources or five sub-tasks are advanced by Saturday night.</td></tr>
+        <tr><td>Sunday</td><td>Reflect and plan.</td><td>Write a weekly note: completed work, blockers, evidence found, evidence gaps, next week’s scope.</td></tr>
+      </table>
+      <p>Use GitHub issues as the task ledger. Labels should include <code>literature</code>, <code>standards</code>, <code>thermal</code>, <code>cost</code>, <code>gis</code>, <code>precedent</code>, <code>equity</code>, <code>behavior</code>, and <code>weekly-review</code>.</p>
+    </section>
+
+    <section id="coding-template">
+      <h2>Source Coding Template</h2>
+      <table>
+        <tr><th>Field</th><th>Prompt</th></tr>
+        <tr><td>Full citation</td><td>Author, year, title, publisher/journal, URL/DOI.</td></tr>
+        <tr><td>Source type</td><td>Standard, guidance, peer-reviewed study, government report, dataset, case study, or design guide.</td></tr>
+        <tr><td>Research question served</td><td>Which SMS/decision-framework question does this source support?</td></tr>
+        <tr><td>Method</td><td>Measurement, simulation, GIS, LCCA, MCDA, survey, design guidance, policy analysis, or other.</td></tr>
+        <tr><td>Metrics</td><td>MRT, PET, UTCI, WBGT, air temperature, surface temperature, cost, crash rate, ridership, comfort, equity, etc.</td></tr>
+        <tr><td>Key finding</td><td>One to three defensible findings, with page numbers when available.</td></tr>
+        <tr><td>Limitations</td><td>What the source does not prove or does not measure.</td></tr>
+        <tr><td>Relevance to SMS</td><td>How it changes feasibility, design, site selection, scoring, or risk.</td></tr>
+        <tr><td>Action item</td><td>What to update next: matrix, map, diagram, hypothesis, method, or advisor question.</td></tr>
+      </table>
+    </section>
+
+    <section id="mutcd">
+      <h2>MUTCD</h2>
+      <p><strong>Status:</strong> source to be coded. Initial use: hard feasibility gate for signal visibility, traffic-control-device interpretation, signs, markings, and intersection operations.</p>
+      <p><strong>SMS relevance:</strong> Any pole-mounted or intersection-adjacent shade concept must avoid obstruction, confusion, or interference with traffic control.</p>
+    </section>
+
+    <section id="prowag">
+      <h2>PROWAG / ADA Public Right-of-Way Accessibility</h2>
+      <p><strong>Status:</strong> source to be coded. Initial use: hard feasibility gate for accessible pedestrian routes, curb ramps, clear width, protruding objects, detectable warnings, and pedestrian circulation.</p>
+      <p><strong>SMS relevance:</strong> Shade infrastructure cannot solve heat exposure by creating accessibility barriers.</p>
+    </section>
+
+    <section id="asce7">
+      <h2>ASCE 7 Wind and Environmental Loading</h2>
+      <p><strong>Status:</strong> source to be coded. Initial use: structural feasibility screen for wind loading, attachments, vibration, uplift, fatigue, and failure risk.</p>
+      <p><strong>SMS relevance:</strong> A shade panel attached to a signal pole creates loads that must be reviewed by qualified structural and traffic-signal engineers.</p>
+    </section>
+
+    <section id="nacto">
+      <h2>NACTO Urban Street Design Guidance</h2>
+      <p><strong>Status:</strong> source to be coded. Initial use: street-design context, pedestrian realm criteria, transit-street design, and urban public-space framing.</p>
+      <p><strong>SMS relevance:</strong> Useful for design language and pedestrian-priority framing, but not a substitute for local standards or engineering approval.</p>
+    </section>
+
+    <section id="thermal-comfort">
+      <h2>Urban Heat, Shade, MRT, UTCI, PET, and WBGT Literature</h2>
+      <p><strong>Status:</strong> source family to be expanded. Initial use: determine which pedestrian thermal metrics are appropriate for shaded waiting zones at signalized intersections.</p>
+      <p><strong>SMS relevance:</strong> Shade primarily changes radiant load; therefore MRT and derived comfort/stress indices may be more relevant than air temperature alone.</p>
+    </section>
+
+    <section id="mcda-lcca">
+      <h2>MCDA, LCCA, Robust Decision-Making, and Infrastructure Systems Literature</h2>
+      <p><strong>Status:</strong> source family to be expanded. Initial use: build a decision framework that compares shade, trees, cool pavement, shelters, arcades, and hybrid interventions under uncertainty.</p>
+      <p><strong>SMS relevance:</strong> Prevents the project from becoming a single-product advocacy argument. The stronger dissertation contribution is the comparison method.</p>
+    </section>
+  </main>
+</body>
+</html>
