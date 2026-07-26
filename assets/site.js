@@ -1,0 +1,10 @@
+const $=(s,c=document)=>c.querySelector(s);const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+function setAudience(a){$$('.audience-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.audience===a));$$('.audience-only').forEach(x=>x.classList.toggle('visible',x.dataset.audience.split(' ').includes(a)||a==='all'));localStorage.setItem('shadeAudience',a)}
+$$('.audience-tabs button').forEach(b=>b.addEventListener('click',()=>setAudience(b.dataset.audience)));setAudience(localStorage.getItem('shadeAudience')||'all');
+const q=$('#refSearch');if(q)q.addEventListener('input',()=>{const v=q.value.toLowerCase();$$('[data-search]').forEach(x=>x.hidden=!x.dataset.search.toLowerCase().includes(v))});
+function n(id){return Number($(id)?.value||0)}
+function updateExposure(){const walk=n('#walkMrt')*n('#walkMin'),wait=n('#waitMrt')*n('#waitMin'),cross=n('#crossMrt')*n('#crossMin'),shade=n('#shadeReduction')/100,total=walk+wait*(1-shade)+cross;$('#exposureResult').textContent=total.toFixed(1)+' °C·min';$('#baselineResult').textContent=(walk+wait+cross).toFixed(1)+' °C·min';$('#savedResult').textContent=((walk+wait+cross)-total).toFixed(1)+' °C·min'}
+$$('#exposureModel input').forEach(x=>x.addEventListener('input',updateExposure));updateExposure();
+const weights=['heat','people','delay','shade','equity','safety','feasibility'];function scoreRow(row){let sum=0,den=0;weights.forEach(k=>{const w=n('#w-'+k),v=Number(row.dataset[k]);sum+=w*v;den+=w*5});return den?100*sum/den:0}function updateScores(){const rows=$$('#candidateTable tbody tr');rows.forEach(r=>$('.score',r).textContent=scoreRow(r).toFixed(1));rows.sort((a,b)=>scoreRow(b)-scoreRow(a)).forEach(r=>r.parentNode.appendChild(r))}$$('#scoreControls input').forEach(x=>x.addEventListener('input',updateScores));updateScores();
+$('#printSummary')?.addEventListener('click',()=>window.print());
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){$$('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-20% 0px -70% 0px'});$$('main section[id]').forEach(s=>io.observe(s));
